@@ -27,9 +27,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|name|string|index: true, null: false, unique: true|
+|mail|string|null: false|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- has_many :groups, through: menbers
+- has_many :messages
+- has_many :members
