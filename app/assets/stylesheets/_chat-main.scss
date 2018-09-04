@@ -8,24 +8,19 @@
     width: calc( 100vw - 300px );
     float: left;
     background-color: $white;
-
-
 	.chat-main__header {
 		    height: 15%;
 		    border: 1px
 		    solid $border;
-
 		&--group  {
 				margin: 0 40px;
 				@include clearfix;
-
 			&-name {
 				color: $grayf;
 				font-size: 20px;
 				margin: 35px 0 15px;
 				float: left;
 			}
-
 			&-edit-btn  {
 			    height:  40px;
 				color: #38AEF0;
@@ -35,7 +30,6 @@
 				border: 1px solid #38AEF0;
 				float: right;
 			}
-
 			&-members {
 				@include mainset($mgrayf, 12px);
 				margin: 0 40px;
@@ -43,58 +37,46 @@
 		}
 	}
 
-
-
-
 	.chat-main__body {
 		height: calc( 100vh - 15% - 90px );
 	    overflow-y: scroll;
-
 		&--messages-list {
 		    padding-top: 26px;
 		    padding-left: 40px;
 		}
-
 			.chat-main__message {
 			    padding: 20px 0;
 			    @include clearfix;
-
-				 &-name {
+				&-name {
 				    @include mainset($grayf, 16px);
 				    font-weight: bold;
 				    float: left;
 				}
-
-				  &-time {
+				&-time {
 				    @include mainset($mgrayf, 12px);
 				    padding: 0 10px 10px;
 				    float: left;
-				  }
-
-				  &-body {
+				}
+				&-body {
 				    @include mainset($grayf, 14px);
 				    clear: both;
-				  }
+			  }
 			}
 	}
-
 
 	.chat-main__footer {
 		box-sizing : border-box;
 	    height: 90px;
 	    width: 100%;
 	    background-color: $gray;
-
 		&-form {
 			box-sizing : border-box;
 		    margin: 0 40px ;
 		    position: relative;
 		}
-
 		&-body {
 			box-sizing : border-box;
 		    position: relative;
-
 			& .message {
 				box-sizing : border-box;
 			    height: 50px;
@@ -103,7 +85,6 @@
 			    margin: 20px 0;
 			    border: none;
 			}
-
 			& .chat-file {
 				box-sizing : border-box;
 			    height: 50px;
@@ -113,7 +94,6 @@
 			    top: 0;
 			    right: 0;
 			}
-
 			& .chat-file .image {
 				box-sizing : border-box;
 			    position: absolute;
@@ -130,7 +110,6 @@
 				}
 			}
 		}
-
 		& .submit {
 			    box-sizing : border-box;
 			    color: $whitef;
