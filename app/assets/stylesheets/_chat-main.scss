@@ -7,20 +7,28 @@
     width: calc( 100vw - 300px );
     float: left;
     background-color: $white;
-	&__header {
+}
+
+	.chat-main__header {
 		    height: 15%;
 		    border: 1px
 		    solid $border;
-		&--group  {
+	}
+
+		.chat-main__header--group  {
 				margin: 0 40px;
 				@include clearfix;
-			&-name {
+		}
+
+			.chat-main__header--group-name {
 				color: $grayf;
 				font-size: 20px;
 				margin: 35px 0 15px;
 				float: left;
 			}
-			&-edit-btn  {
+
+			.chat-main__header--group-edit-btn  {
+			// height:  40px;
 				color: #38AEF0;
 				font-size: 15px;
 				padding: 12.5px 20px;
@@ -28,82 +36,103 @@
 				border: 1px solid #38AEF0;
 				float: right;
 			}
+
+			.chat-main__header-members {
+				@include mainset($mgrayf, 12px);
+				margin: 0 40px;
+			}
+				
+
+		.chat-main__body {
+			height: calc( 100vh - 15% - 90px );
+		    overflow-y: scroll;
 		}
-		&-members {
-			@include mainset($mgrayf, 12px);
-			margin: 0 40px;
-		}
-	}
-	&__body {
-		height: calc( 100vh - 15% - 90px );
-	    overflow-y: scroll;
-		&--messages-list {
-		    padding-top: 26px;
-		    padding-left: 40px;
-		}
-	}
-	&__message {
-	    padding: 20px 0;
-	    @include clearfix;
-		&-name {
-		    @include mainset($grayf, 16px);
-		    font-weight: bold;
-		    float: left;
-		}
-		&-time {
-			@include mainset($mgrayf, 12px);
-			padding: 0 10px 10px;
-			float: left;
-		}
-		&-body {
-			@include mainset($grayf, 14px);
-			clear: both;
-		}
-	}
-	&__footer {
+
+			.chat-main__body--messages-list {
+			    padding-top: 26px;
+			    padding-left: 40px;
+			}
+
+			.chat-main__message {
+			    padding: 20px 0;
+			    @include clearfix;
+			}
+				
+
+			 .chat-main__message-name {
+			    @include mainset($grayf, 16px);
+			    font-weight: bold;
+			    float: left;
+			}
+
+			  .chat-main__message-time {
+			    @include mainset($mgrayf, 12px);
+			    padding: 0 10px 10px;
+			    float: left;
+			  }
+
+			  .chat-main__message-body {
+			    @include mainset($grayf, 14px);
+			    clear: both;
+			  }
+
+
+	.chat-main__footer {
+		box-sizing : border-box;
 	    height: 90px;
 	    width: 100%;
 	    background-color: $gray;
-		&-form {
+	}
+
+		.chat-main__footer-form {
+			box-sizing : border-box;
 		    margin: 0 40px ;
 		    position: relative;
 		}
-		&-body {
+
+		.chat-main__footer-body {
+			box-sizing : border-box;
 		    position: relative;
-			& .message {
-				box-sizing : border-box;
-			    height: 50px;
-			    width: calc( 100% - 130px );
-			    padding: 15px 10px;
-			    margin: 20px 0;
-			    border: none;
-			}
-			& .chat-file {
-				box-sizing : border-box;
-			    height: 50px;
-			    width: 40px;
-			    margin: 32px 130px 20px 0;
-			    position: absolute;
-			    top: 0;
-			    right: 0;
-			}
-			& .chat-file .image {
-				box-sizing : border-box;
-			    position: absolute;
-			    top: 15px;
-			    left: 15px;
+		}
+
+		.chat-main__footer-body .message {
+			box-sizing : border-box;
+		    height: 50px;
+		    width: calc( 100% - 130px );
+		    padding: 15px 10px;
+		    margin: 20px 0;
+		    border: none;
+		}
+
+		.chat-main__footer-body .chat-file {
+			box-sizing : border-box;
+		    height: 50px;
+		    width: 40px;
+		    margin: 32px 130px 20px 0;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		}
+
+		.chat-main__footer-body .chat-file .image {
+			box-sizing : border-box;
+		    position: absolute;
+		    top: 15px;
+		    left: 15px;
+		    display: none;
+			.fa {
 			    display: none;
-				.fa {
-				    display: none;
-				    font: normal normal normal 14px/1 FontAwesome;
-				    font-size: inherit;
-				    text-rendering: auto;
-				    -webkit-font-smoothing: antialiased;
-				    -moz-osx-font-smoothing: grayscale;
-				}
+			    font: normal normal normal 14px/1 FontAwesome;
+			    font-size: inherit;
+			    text-rendering: auto;
+			    // -webkit-font-smoothing: antialiased;
+			    // -moz-osx-font-smoothing: grayscale;
 			}
 		}
-		& .submit {
+
+
+
+		.chat-main__footer .submit {
 		    box-sizing : border-box;
 		    color: $whitef;
 		    width: 100px;
@@ -116,5 +145,11 @@
 		    right: 0;
 		    border: none;
 		}
-	}
-}
+	
+
+
+
+
+
+
+
