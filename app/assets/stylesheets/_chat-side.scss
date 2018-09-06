@@ -1,93 +1,113 @@
-@import "font-awesome";
 @import "variable";
 @import "mixin";
+
 
 .chat-side {
     height: 100vh;
     width: 300px;
     float: left;
-  }
-
-  .chat-side__user {
-    height: 15%;
-    width: 100%;
-    background-color: $navy;
-    position: relative;
-   }
-    .chat-side__user-content {
-      height: 50px;
-      width: 100%;
-      line-height: 50px;
-      margin: auto 0;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-    }
-
-       .chat-side__user-name {
-          @include sideset(16px);
-          font-weight: bold;
-          margin: 0 20px;
-          position: relative;
-          display: inline-block;
+    &__user {
+        height: 15%;
+        width: 100%;
+        background-color: $navy;
+        position: relative;
+        &-content {
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+            margin: auto 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+        &-name {
+            @include sideset(16px);
+            font-weight: bold;
+            margin: 0 20px;
+            position: relative;
+            display: inline-block;
+        }
+        &-content {
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+            margin: auto 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+        &-name {
+            @include sideset(16px);
+            font-weight: bold;
+            margin: 0 20px;
+            position: relative;
+            display: inline-block;
         }
 
-         .chat-side__user--new-group {
+        &--new-group {
             height: 50px;
             width: 16px;
             color: $whitef;
             margin-left: 90px;
             position: relative;
             display: inline-block;
-           .fa {
-              color: $whitef;
-              display: inline-block;
-              font: normal normal normal 14px/1 FontAwesome;
-              font-size: inherit;
-              text-rendering: auto;
-           }
-         }
-
-         .chat-side__user--edit-user {
-             height: 50px;
-             width: 13.7px;
-             color: $whitef;
-             position: relative;
-             display: inline-block;
-             .fa {
+            .fa {
+                color: $whitef;
+                margin-left: 90px;
+                position: relative;
+                display: inline-block;
+            }
+            .fa {
+                color: $whitef;
                 display: inline-block;
                 font: normal normal normal 14px/1 FontAwesome;
                 font-size: inherit;
                 text-rendering: auto;
             }
-          }
-      
-
-
-        .chat-side__groups {
-            height: 85%;
-            background-color: #2f3e51;
-            padding: 0 20px;
         }
-
-     .chat-side__group-list {
-          height: 100%;
-          color: $whitef;
-      }
-
-    .chat-side__group {
-      padding-top: 20px;
-         .-name {
-              @include sideset(15px);
-              position: relative;
+        &--edit-user {
+            height: 50px;
+            width: 13.7px;
+            color: $whitef;
+            position: relative;
+            display: inline-block;
+            .fa {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+            }
+        }
+        &--edit-user {
+            height: 50px;
+            width: 13.7px;
+            color: $whitef;
+            position: relative;
+            display: inline-block;
+            .fa {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+            }
+        }
     }
-
-          .-message {
-              @include sideset(11px);
-              font-size:  15px;
-              position: relative;
-              padding-top: 5px;
-         }
-
-      }
-
+    &__groups {
+        height: 85%;
+        background-color: $blue;
+        padding: 0 20px;
+        &-list {
+            height: 100%;
+            color: $whitef;
+        }
+    }
+    &__group {
+        padding-top: 20px;
+        &-name {
+            font-size: 15px;
+        }
+        &-message {
+            font-size: 11px;
+        }
+    }
+}
