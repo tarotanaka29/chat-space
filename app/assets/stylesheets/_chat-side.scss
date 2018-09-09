@@ -11,7 +11,7 @@
         width: 100%;
         background-color: $navy;
         position: relative;
-        &-content {
+        &-contents {
             height: 50px;
             width: 100%;
             line-height: 50px;
@@ -36,14 +36,6 @@
             top: 0;
             bottom: 0;
         }
-        &-name {
-            @include sideset(16px);
-            font-weight: bold;
-            margin: 0 20px;
-            position: relative;
-            display: inline-block;
-        }
-
         &--new-group {
             height: 50px;
             width: 16px;
@@ -53,38 +45,22 @@
             display: inline-block;
             .fa {
                 color: $whitef;
-                margin-left: 90px;
-                position: relative;
-                display: inline-block;
             }
+            .fa {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+            }
+        }
+        &--edit-user {
+            height: 50px;
+            width: 13.7px;
+            color: $whitef;
+            position: relative;
+            display: inline-block;
             .fa {
                 color: $whitef;
-                display: inline-block;
-                font: normal normal normal 14px/1 FontAwesome;
-                font-size: inherit;
-                text-rendering: auto;
-            }
-        }
-        &--edit-user {
-            height: 50px;
-            width: 13.7px;
-            color: $whitef;
-            position: relative;
-            display: inline-block;
-            .fa {
-                display: inline-block;
-                font: normal normal normal 14px/1 FontAwesome;
-                font-size: inherit;
-                text-rendering: auto;
-            }
-        }
-        &--edit-user {
-            height: 50px;
-            width: 13.7px;
-            color: $whitef;
-            position: relative;
-            display: inline-block;
-            .fa {
                 display: inline-block;
                 font: normal normal normal 14px/1 FontAwesome;
                 font-size: inherit;
