@@ -1,9 +1,9 @@
 @import "font-awesome";
-@import "./variable";
-@import "./mixin";
+@import "variable";
+@import "mixins/mixin";
 
 .chat-main {
-	height: 100vh;
+		height: 100vh;
     width: calc( 100vw - 300px );
     float: left;
     background-color: $white;
@@ -35,7 +35,7 @@
 		}
 	}
 	&__body {
-		height: calc( 100vh - 15% - 90px );
+			height: calc( 100vh - 15% - 90px );
 	    overflow-y: scroll;
 		&--messages-list {
 		    padding-top: 26px;
@@ -64,11 +64,11 @@
 	    height: 90px;
 	    width: 100%;
 	    background-color: $gray;
-	    box-sizing : border-box;
+	    box-sizing: border-box;
 		&-form {
 		    margin: 0 40px ;
 		    position: relative;
-		    box-sizing : border-box;
+		    box-sizing: border-box;
 		}
 			&-body {
 			    position: relative;
@@ -78,7 +78,7 @@
 				    padding: 15px 10px;
 				    margin: 20px 0;
 				    border: none;
-				    box-sizing : border-box;
+				    box-sizing: border-box;
 				}
 				& .chat-file {
 				    height: 50px;
@@ -87,14 +87,14 @@
 				    position: absolute;
 				    top: 0;
 				    right: 0;
-				    box-sizing : border-box;
+				    box-sizing: border-box;
 				}
 				& .chat-file .image {
 				    position: absolute;
 				    top: 15px;
 				    left: 15px;
 				    display: none;
-				    box-sizing : border-box;
+				    box-sizing: border-box;
 					.fa {
 					    display: none;
 					    font: normal normal normal 14px/1 FontAwesome;
@@ -116,7 +116,7 @@
 		    top: 0;
 		    right: 0;
 		    border: none;
-		    box-sizing : border-box;
+		    box-sizing: border-box;
 		}
 	}
 }
