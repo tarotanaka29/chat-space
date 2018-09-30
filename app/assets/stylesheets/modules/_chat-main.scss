@@ -2,6 +2,7 @@
 @import "variable";
 @import "mixins/mixin";
 
+
 .chat-main {
 		height: 100vh;
     width: calc( 100vw - 300px );
@@ -35,20 +36,20 @@
 		}
 	}
 	&__body {
-			height: calc( 100vh - 15% - 90px );
-	    overflow-y: scroll;
+		height: calc( 100vh - 15% - 90px );
+    overflow-y: scroll;
 		&--messages-list {
-		    padding-top: 26px;
-		    padding-left: 40px;
+	    padding-top: 26px;
+	    padding-left: 40px;
 		}
 	}
 	&__message {
 	    padding: 20px 0;
 	    @include clearfix;
 		&-name {
-		    @include mainset($grayf, 16px);
-		    font-weight: bold;
-		    float: left;
+	    @include mainset($grayf, 16px);
+	    font-weight: bold;
+	    float: left;
 		}
 		&-time {
 			@include mainset($mgrayf, 12px);
@@ -66,57 +67,58 @@
 	    background-color: $gray;
 	    box-sizing: border-box;
 		&-form {
-		    margin: 0 40px ;
-		    position: relative;
-		    box-sizing: border-box;
-		}
-			&-body {
-			    position: relative;
-				& .message {
-				    height: 50px;
-				    width: calc( 100% - 130px );
-				    padding: 15px 10px;
-				    margin: 20px 0;
-				    border: none;
-				    box-sizing: border-box;
-				}
-				& .chat-file {
-				    height: 50px;
-				    width: 40px;
-				    margin: 32px 130px 20px 0;
-				    position: absolute;
-				    top: 0;
-				    right: 0;
-				    box-sizing: border-box;
-				}
-				& .chat-file .image {
-				    position: absolute;
-				    top: 15px;
-				    left: 15px;
-				    display: none;
-				    box-sizing: border-box;
-					.fa {
-					    display: none;
-					    font: normal normal normal 14px/1 FontAwesome;
-					    font-size: inherit;
-					    text-rendering: auto;
-					    -webkit-font-smoothing: antialiased;
-					    -moz-osx-font-smoothing: grayscale;
-					}
+		  margin: 0 40px ;
+		  position: relative;
+		  box-sizing: border-box;
+			#new_message {
+				#message_content {
+          height: 50px;
+			    width: calc( 100% - 130px );
+			    padding: 15px 10px;
+			    margin: 20px 0;
+			    border: none;
+			    box-sizing: border-box;
 				}
 			}
-		& .submit {
-		    color: $whitef;
-		    width: 100px;
+			&__mask {
 		    height: 50px;
-		    text-align: center;
-		    background-color: $light-blue;
-		    margin: 20px 0;
+		    width: 40px;
+		    margin: 32px 130px 20px 0;
 		    position: absolute;
 		    top: 0;
 		    right: 0;
-		    border: none;
 		    box-sizing: border-box;
+				.mask__image {
+			    position: absolute;
+			    top: 15px;
+			    left: 15px;
+			    display: none;
+			    box-sizing: border-box;
+					.fa {
+				    display: none;
+				    font: normal normal normal 14px/1 FontAwesome;
+				    font-size: inherit;
+				    text-rendering: auto;
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+					}
+				}
+			}
+				.mask__submit {
+			    color: $whitef;
+			    width: 100px;
+			    height: 50px;
+			    text-align: center;
+			    background-color: $light-blue;
+			    margin: 20px 0;
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    border: none;
+			    box-sizing: border-box;
+			}
 		}
-	}
+  }
 }
+
+

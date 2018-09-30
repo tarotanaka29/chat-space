@@ -1,0 +1,12 @@
+.chat-main__body
+  .chat-main__body--messages-list
+    .chat-main__message.clearfix{"data-id": "2096"}
+      .chat-main__message-name
+        = message.user.name
+      .chat-main__message-time
+        = format_posted_time(message.created_at)
+      .chat-main__message-body
+        - if message.content.present?
+          %p.chat-main__message__content
+            = message.content
+        = image_tag message.image.url, class: 'chat-main__message__image' if message.image.present?
