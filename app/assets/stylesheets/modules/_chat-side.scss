@@ -1,0 +1,80 @@
+@import "variable";
+@import "mixins/mixin";
+
+
+.chat-side {
+  height: 100vh;
+  width: 300px;
+  float: left;
+  .chat-side__user {
+    height: 15%;
+    width: 100%;
+    background-color: $navy;
+    position: relative;
+    &-content {
+      height: 50px;
+      width: 100%;
+      line-height: 50px;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+    &-name {
+      @include sideset(16px);
+      font-weight: bold;
+      margin: 0 20px;
+      position: relative;
+      display: inline-block;
+    }
+    &--new-group {
+      height: 50px;
+      width: 16px;
+      color: $whitef;
+      margin-left: 90px;
+      position: relative;
+      display: inline-block;
+      .fa {
+        color: $whitef;
+      }
+      .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+      }
+    }
+    &--edit-user {
+      height: 50px;
+      width: 13.7px;
+      color: $whitef;
+      position: relative;
+      display: inline-block;
+      .fa {
+        color: $whitef;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+      }
+    }
+  }
+  .chat-side__groups {
+    height: 85%;
+    background-color: $blue;
+    padding: 0 20px;
+    &-list {
+      height: 100%;
+      color: $whitef;
+    }
+  }
+  &__group {
+    padding-top: 20px;
+    &-name {
+      font-size: 15px;
+    }
+    &-message {
+      font-size: 11px;
+    }
+  }
+}
