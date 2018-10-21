@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var html = `<div class="chat-main__body">    
+    var html = `<div class="chat-main__body">
   <div class="chat-main__body--messages-list">
     <div class="chat-main__message clearfix" data-id="2096">
       <div class="chat-main__message-name">
@@ -10,7 +10,7 @@ $(function(){
         ${message.created_at}
       </div>
       <div class="chat-main__message-body">
-        <p class="chat-main__message__content"> 
+        <p class="chat-main__message__content">
           ${message.content}
         </p>
         <div class="chat-main__message__image">
@@ -45,6 +45,9 @@ $(function(){
       $('.messages').animate( {scrollTop: $('chat-main__body').offset().top}, 100 );
       // #new_commentをリセットしてあげる必要がある
       $('#new_message')[0].reset();
+    })
+    .fail(function(){
+      alert('error');
     })
   })
 })
