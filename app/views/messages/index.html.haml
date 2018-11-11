@@ -5,13 +5,15 @@
   .chat-main__header
     .chat-main__header--group.clearfix
       .chat-main__header--group-name
-        bbb
-      %a.chat-main__header--group-edit-btn{href: "/groups/1224/edit"}
-        edit
-    .chat-main__header-members
-      MEMBER:
-      %i
-        tarotanaka
+        = @group.name
+      .chat-main__header-members
+        MEMBER:
+        - @group.users.each do |user|
+          %span.chat-main__header__user= user.name
+
+      = link_to edit_group_path(@group) do
+        .chat-main__header--group-edit-btn
+          edit
 
   .messages
     = render partial: 'message', collection: @messages
