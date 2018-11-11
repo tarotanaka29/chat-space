@@ -24,6 +24,7 @@ $(function(){
 	  return html;
   }
 
+//非同期通信
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -45,7 +46,35 @@ $(function(){
       $('#new_message')[0].reset();
     })
     .fail(function(){
-      alert('error');
+      alert('エラーが発生しました');
     })
+    .always(function(){
+      $('.form__submit').prop('disabled', false);
+    });
+
+  //自動更新
+    var interval = setInterval(function(){
+    var messageId = $('.chat-main__body--messages-list').last().attr('data-id')
+    var presentHTML = window.location.href
+    if (presentHTML.match(/\/groups\/\d+\/messages/)){
+      $.ajax({
+      type: 'GET',
+      url: presentHTML,
+      data:{ id: messageId },
+      dataType: 'json'
+    })
+  .done(function(json){
+    var insertHTML = '';
+    json.forEach(function(message){
+      insertHTML += buildHTML(message);
+    });
+    $('.chat-main__message-body').append(insertHTML);
+    $('.chat-main__message-body').animate( {'scrollTop': $('.chat-main__message-body')[0].scrollHeight}, 'fast' );
   })
-})
+  .fail(function(data){
+    alert('自動更新に失敗しました');
+  });
+  } else {
+    clearInterval(interval);
+  }} , 5 * 1000 );
+});
