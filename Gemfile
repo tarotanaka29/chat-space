@@ -63,3 +63,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+
+group :production do
+  gem 'unicorn'
+end
